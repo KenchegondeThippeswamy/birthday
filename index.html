@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160d2b">
+<title>For Chaithra ✨</title>
+<style>
+  :root { --pink:#ff77ad; --lav:#c9a7ff; --gold:#ffe2a8; }
+  * { box-sizing:border-box }
+  body {
+    margin:0; min-height:100vh; overflow-x:hidden; color:#fff;
+    font-family: ui-rounded, "Segoe UI", system-ui, sans-serif;
+    background:
+      radial-gradient(ellipse at 15% 15%, #633b8d 0, transparent 38%),
+      radial-gradient(ellipse at 85% 80%, #74355f 0, transparent 35%),
+      linear-gradient(145deg,#100b22,#211238 55%,#35152f);
+    display:grid; place-items:center; padding:28px 16px;
+  }
+  .stars,.stars:before,.stars:after { position:fixed; inset:0; pointer-events:none; content:""; }
+  .stars { background-image:radial-gradient(2px 2px at 20% 30%,#fff 50%,transparent 55%),radial-gradient(1px 1px at 70% 20%,#fff 50%,transparent 55%),radial-gradient(2px 2px at 80% 70%,#ffe2a8 50%,transparent 55%),radial-gradient(1px 1px at 35% 85%,#fff 50%,transparent 55%); opacity:.65; }
+  .stars:before { background-image:radial-gradient(1px 1px at 10% 65%,#fff 50%,transparent 55%),radial-gradient(2px 2px at 55% 45%,#ffd0e4 50%,transparent 55%),radial-gradient(1px 1px at 92% 40%,#fff 50%,transparent 55%); animation:twinkle 4s ease-in-out infinite alternate; }
+  @keyframes twinkle { to { opacity:.2; transform:translateY(-8px) } }
+  .card {
+    width:min(680px,100%); position:relative; text-align:center; padding:clamp(28px,6vw,58px) clamp(20px,6vw,54px);
+    border:1px solid #ffffff30; border-radius:30px;
+    background:linear-gradient(145deg,#ffffff18,#ffffff08);
+    box-shadow:0 25px 90px #05020c88,inset 0 1px #ffffff30;
+    backdrop-filter:blur(14px); animation:arrive 1s cubic-bezier(.2,.8,.2,1) both;
+  }
+  @keyframes arrive { from { opacity:0; transform:translateY(22px) scale(.97) } to { opacity:1; transform:none } }
+  .badge { display:inline-block; padding:8px 15px; border:1px solid #ffffff35; border-radius:99px; color:#ffe2ef; font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; }
+  .cake { font-size:clamp(3.5rem,10vw,5.5rem); margin:18px 0 4px; filter:drop-shadow(0 8px 20px #ff77ad55); animation:bob 3s ease-in-out infinite; }
+  @keyframes bob { 50% { transform:translateY(-9px) rotate(3deg) } }
+  h1 { margin:8px 0 10px; font-size:clamp(2.5rem,8vw,4.8rem); line-height:1.05; letter-spacing:-.05em; background:linear-gradient(90deg,#fff,#ffc1db 48%,#ffe5ae); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .subtitle { color:#e9d9f5; font-size:clamp(1rem,2.8vw,1.18rem); line-height:1.7; max-width:490px; margin:0 auto; }
+  .divider { width:76px; height:2px; margin:26px auto; background:linear-gradient(90deg,transparent,var(--gold),transparent); }
+  .message { color:#fff0f7; font-size:1.03rem; line-height:1.9; max-width:500px; margin:auto; }
+  .message strong { color:#ffd1e5; font-weight:700 }
+  button {
+    margin-top:30px; border:0; cursor:pointer; color:#32162f; font-weight:750; font-size:1rem;
+    padding:14px 24px; border-radius:99px; background:linear-gradient(100deg,#ffc0da,#ffe4ae);
+    box-shadow:0 8px 25px #ff77ad38; transition:transform .2s,box-shadow .2s;
+  }
+  button:hover { transform:translateY(-3px); box-shadow:0 12px 32px #ff77ad66 }
+  .surprise { display:none; margin:25px auto 0; max-width:480px; padding:20px; border-radius:18px; background:#ffffff12; border:1px solid #ffffff28; line-height:1.8; color:#ffe8f1; }
+  .surprise.show { display:block; animation:arrive .6s both }
+  .signature { margin-top:28px; color:#d8c3e8; font-size:.9rem }
+  .heart { position:fixed; bottom:-35px; pointer-events:none; animation:floatUp linear forwards; z-index:3; }
+  @keyframes floatUp { to { transform:translateY(-110vh) rotate(25deg); opacity:0 } }
+  .tiny { margin-top:14px; color:#bba8ca; font-size:.75rem }
+  @media (prefers-reduced-motion: reduce) { *,*:before,*:after { animation-duration:.01ms !important; transition-duration:.01ms !important } }
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<main class="card">
+  <div class="badge">A little celebration, made just for you</div>
+  <div class="cake" aria-hidden="true">🎂</div>
+  <h1>Happy Birthday,<br>Chaithra!</h1>
+  <p class="subtitle">Today deserves a little extra sparkle — because someone as wonderful as you deserves it. ✨</p>
+  <div class="divider"></div>
+  <p class="message">
+    May your days be filled with <strong>beautiful surprises</strong>, genuine smiles,
+    exciting adventures, and people who make your heart happy.
+    May every dream you’re quietly working towards find its way to you.
+    Keep shining, keep growing, and never stop being wonderfully you. 💖
+  </p>
+  <button id="surpriseBtn" type="button">Open your little surprise ✨</button>
+  <div class="surprise" id="surprise">
+    🌷 A wish just for you:<br>
+    May this new chapter be your brightest one yet — full of laughter,
+    peaceful moments, big wins, and memories you’ll want to keep forever.
+    <br><strong>Have the loveliest birthday, Chaithra! 🥳</strong>
+  </div>
+  <div class="signature">Made with a little code & a lot of good wishes 💫</div>
+  <div class="tiny">A small webpage to make your special day feel extra special.</div>
+</main>
+<script>
+  const btn = document.getElementById('surpriseBtn');
+  const surprise = document.getElementById('surprise');
+  btn.addEventListener('click', () => {
+    surprise.classList.toggle('show');
+    btn.textContent = surprise.classList.contains('show') ? 'A little more sparkle 💖' : 'Open your little surprise ✨';
+    for (let i=0; i<18; i++) {
+      const h = document.createElement('span');
+      h.className = 'heart';
+      h.textContent = ['💖','✨','💕','🌸','⭐'][Math.floor(Math.random()*5)];
+      h.style.left = Math.random()*100 + 'vw';
+      h.style.fontSize = (15 + Math.random()*19) + 'px';
+      h.style.animationDuration = (3 + Math.random()*3) + 's';
+      document.body.appendChild(h);
+      setTimeout(() => h.remove(), 6500);
+    }
+  });
+</script>
+</body>
+</html>
